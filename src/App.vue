@@ -4,7 +4,7 @@ import FileUpload from './components/FileUpload.vue'
 
 <template>
 
-  <div style="width: 500px;height: 500px">
+  <div>
     <FileUpload />
   </div>
 
