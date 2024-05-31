@@ -2,9 +2,10 @@
   <el-upload
       class="upload-demo"
       drag
-      action="http://127.0.0.1:8080/image/upload"
+      action="http://123.60.154.22:8080/image/upload"
       name="image"
       multiple
+      :on-success="uploadSuccess"
   >
     <el-icon class="el-icon--upload"><upload-filled /></el-icon>
     <div class="el-upload__text">
@@ -16,6 +17,9 @@
       </div>
     </template>
   </el-upload>
+  <div>
+    <a :href="fileUrl" target="_blank">{{ fileUrl }}</a>
+  </div>
 </template>
 
 <script setup>
@@ -25,7 +29,16 @@ import { UploadFilled } from '@element-plus/icons-vue'
 <script>
 export default {
   name: "FileUpload",
+  data() {
+    return {
+      fileUrl: ""
+    }
+  },
   methods: {
+    //上传文件成功
+    uploadSuccess (response) {
+      this.fileUrl = "http://123.60.154.22:8080/" + response.message
+    }
   }
 }
 </script>
