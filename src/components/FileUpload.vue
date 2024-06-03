@@ -12,7 +12,7 @@
   <el-row>
     <el-col :span="8"></el-col>
     <el-col :span="8">
-      <el-upload class="upload-demo" drag action="http://123.60.154.22:8080/image/upload" name="image" :limit="1"
+      <el-upload class="upload-demo" drag action="http://121.36.241.84:80/images-land/image/upload" name="image" :limit="1"
       :show-file-list="false"
         :multiple="false" :before-upload="beforeAvatarUpload" :on-success="uploadSuccess">
         <el-icon class="el-icon--upload"><upload-filled /></el-icon>
